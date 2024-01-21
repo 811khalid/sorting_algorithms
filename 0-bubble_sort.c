@@ -13,29 +13,29 @@ tmp = *a1;
 }
 /**
  * bubble_sort - Sort integers in ascending
- * @array1: Sort array of integers
- * @size1: The size of the array
+ * @array: Sort array of integers
+ * @size: The size of the array
  *
  * Description: Prints the array
  */
-void bubble_sort(int *array1, size_t size1)
+void bubble_sort(int *array, size_t size)
 {
-size_t i, len = size1;
+size_t i, len1 = size;
 bool bubble = false;
 if (array == NULL || size < 2)
 return;
 while (bubble == false)
 {
 bubble = true;
-for (i = 0; i < len - 1; i++)
+for (i = 0; i < len1 - 1; i++)
 {
-if (array1[i] > array1[i + 1])
+if (array[i] > array[i + 1])
 {
-swap_ints(array1 + i, array1 + i + 1);
-print_array(array1, size);
+swap_ints(array + i, array + i + 1);
+print_array(array, size);
 bubble = false;
 }
 }
-len--;
+len1--;
 }
 }

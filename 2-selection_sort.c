@@ -6,32 +6,32 @@
  */
 void swap_ints(int *ap, int *bp)
 {
-int tmp;
-tmp = *ap;
+int tmp1;
+tmp1 = *ap;
 *ap = *bp;
 *bp = tmp;
 }
 /**
  * selection_sort - Sort an array of integers in ascending order
- * @array1: An array of integers.
- * @size1: The size of the array.
+ * @array: An array of integers.
+ * @size: The size of the array.
  * Description: Prints the array after each swap.
  */
-void selection_sort(int *array1, size_t size1)
+void selection_sort(int *array, size_t size)
 {
 int *min1;
 size_t i, j;
-if (array1 == NULL || size1 < 2)
+if (array == NULL || size < 2)
 return;
-for (i = 0; i < size1 - 1; i++)
+for (i = 0; i < size - 1; i++)
 {
-min = array1 + i;
-for (j = i + 1; j < size1; j++)
-min1 = (array1[j] < *min1) ? (array1 + j) : min1;
-if ((array1 + i) != min1)
+min1 = array + i;
+for (j = i + 1; j < size; j++)
+min1 = (array[j] < *min1) ? (array + j) : min1;
+if ((array + i) != min1)
 {
-swap_ints(array1 + i, min1);
-print_array(array1, size1);
+swap_ints(array + i, min1);
+print_array(array, size);
 }
 }
 }
